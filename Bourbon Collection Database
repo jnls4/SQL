@@ -1,0 +1,34 @@
+--Whiskey Collection
+CREATE TABLE whiskey_collection (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, proof INTEGER, type TEXT, price INTEGER );
+
+INSERT INTO whiskey_collection VALUES (1, "Jack Daniels Bonded", 1, 100, "Tennessee", 36.99);
+INSERT INTO whiskey_collection VALUES (2, "EH Taylor Small Batch", 1, 100, "Bourbon", 44.99);
+INSERT INTO whiskey_collection VALUES (3, "Evan Williams 1783", 1, 90, "Bourbon", 17.99);
+INSERT INTO whiskey_collection VALUES (4, "Angel's Envy Rye", 1, 100, "Rye", 75.99);
+INSERT INTO whiskey_collection VALUES (5, "Bardstown Founders Collab.", 1, 110, "Whiskey blend", 165.99);
+INSERT INTO whiskey_collection VALUES (6, "Knob Creek 12 Year", 1, 100, "Bourbon", 74.99);
+INSERT INTO whiskey_collection VALUES (7, "Weller Special Reserve", 2, 90, "Wheated bourbon", 32.99);
+INSERT INTO whiskey_collection VALUES (8, "Wild Turkey Rare Breed", 1, 116.8, "Bourbon", 46.99);
+INSERT INTO whiskey_collection VALUES (9, "Elijah Craig Barrel Proof A121", 1, 123.6, "Bourbon", 65.99);
+INSERT INTO whiskey_collection VALUES (10, "Yellow Spot", 1, 92, "Irish", 99.99);
+INSERT INTO whiskey_collection VALUES (11, "Barrel Rye Single Barrel", 1, 114.74, "Rye", 79.99);
+INSERT INTO whiskey_collection VALUES (12, "Breckenridge High Proof Blend", 1, 105, "Bourbon blend", 55.99);
+INSERT INTO whiskey_collection VALUES (13, "Prichard's Double Chocolate", 1, 90, "Bourbon", 75.99);
+INSERT INTO whiskey_collection VALUES (14, "Murray Hill Club Batch 23", 1, 103, "Bourbon blend", 110.99);
+INSERT INTO whiskey_collection VALUES (15, "Angel's Envy", 1, 86.6, "Bourbon", 45.99);
+INSERT INTO whiskey_collection VALUES (16, "Maker's Mark Private Selection", 1, 111.2, "Wheated bourbon", 57.99);
+INSERT INTO whiskey_collection VALUES (17, "Maker's Mark 2021 FAE- 01", 1, 110.6, "Wheated bourbon", 65.99);
+INSERT INTO whiskey_collection VALUES (18, "Eagle Rare", 1, 90, "Bourbon", 34.99);
+INSERT INTO whiskey_collection VALUES (19, "Henry McKenna Single Barrel BIB", 1, 100, "Bourbon", 32.99);
+INSERT INTO whiskey_collection VALUES (20, "Four Roses Small Batch Select", 1, 104, "Bourbon blend", 55.99);
+
+SELECT * FROM whiskey_collection;
+SELECT name, proof FROM whiskey_collection WHERE proof >= 100
+ORDER BY proof ASC;
+SELECT name, proof FROM whiskey_collection WHERE proof <=99
+ORDER BY proof ASC;
+
+SELECT MAX(proof) FROM whiskey_collection;
+SELECT MIN(proof) FROM whiskey_collection;
+SELECT AVG(proof) FROM whiskey_collection;
+SELECT name, MIN(price) FROM whiskey_collection GROUP BY price;
